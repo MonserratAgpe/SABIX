@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Cambiado a Roboto */
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    padding: 3cm; /* Borde de 3 cm */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Evita que se desborde el contenido */
+}
+
+.header .fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra toda el área */
+}
+
+.content {
+    padding: 10px; /* Espacio para el contenido */
+    text-align: center;
+    margin-top: 100vh; /* Añadir margen superior para evitar superposición */
+}
+
+.eslogan-img {
+    width: 100%; /*tamañoooo
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Para centrar la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.quienes-somos {
+    margin: 20px 0;
+    text-align: center; /* Centra el texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carrusel {
+    position: relative;
+    max-width: 100%; /* Ajusta el ancho del carrusel */
+    margin: 20px auto; /* Centra el carrusel */
+    overflow: hidden; /* Oculta el contenido que se sale */
+}
+
+.carrusel-imagen {
+    display: none; /* Oculta todas las imágenes por defecto */
+    justify-content: center; /* Centra las imágenes */
+}
+
+.carrusel-imagen img {
+    width: 100%; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px; /* Posición del botón anterior */
+}
+
+.next {
+    right: 10px; /* Posición del botón siguiente */
+}
+
+.productos {
+    margin: 40px 0;
+}
+
+.producto {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    border: 2px solid white;
+}
+
+.comprar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #80c683;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.comprar:hover {
+    background-color: #67b46f;
+}
+
+.social-icons {
+    display: flex; /* Usa flexbox para alinear los iconos */
+    justify-content: center; /* Centra los iconos */
+    margin-top: 8px; /* Espacio entre el texto y los iconos */
+}
+
+.social-logo {
+    height: 1.5cm; /* Altura de los logos */
+    width: auto; /* Ancho automático para mantener la proporción */
+    margin: 0 1.0cm; /* Separación de 3cm entre los logos */
+}
+.sadecv-img {
+    width: 50%; /*tamañoooo
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Para centrar la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Página de SabiX</title>
+</head>
+<body>
+    <div class="header">
+        <img src="./media/fondo.png" alt="Imagen FONDO" class="fondo" />
+    </div>
+    <div class="content">
+        <div class="eslogan">
+            <img src="./media/eslogan.jpg" alt="eslogan" class="eslogan-img" />
+        </div>
+        <div class="quienes-somos">
+            <h1>¿Quiénes Somos?</h1>
+            <h3>Somos una empresa comprometida con el aprovechamiento integral de la sábila (Aloe vera), una planta reconocida por sus múltiples beneficios para la salud, el cuidado personal y el medio ambiente. 
+              Nuestra misión es transformar este recurso natural en productos innovadores, sostenibles y de alta calidad que respondan a las tendencias del mercado actual.</h3>
+            <h1>Nos desenvolvemos en tres sectores clave:</h1>
+            
+            <div class="carrusel">
+                <div class="carrusel-imagen">
+                    <img src="./media/aloeard.png" alt="Aloe Ardiente" />
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./media/mascarillapng.png" alt="Mascarilla Exfoliante" />
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="./media/ardiente.png" alt="Aloe Ardiente" />
+                </div>
+                <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+                <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
+            </div>
+
+            <h3>Agroindustria y fertilizantes orgánicos     Bebidas alcohólicas artesanales     Cosmética natural</h3>
+        </div>
+        <div class="productos">
+            <h3>Nuestros Productos</h3>
+            <div class="producto">
+                <img src="./media/masc.jpg" alt="Producto 1" />
+                <h3>Mascarilla Exfoliante Suavecita</h3>
+                <p>Descripción del Producto 1.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSexhvnArqVLDn5bDgeU1nZIv0Hb98nCp88vjqRAJcG6_Vdu4g/viewform?usp=header" class="comprar">Comprar</a>
+            </div>
+            <div class="producto">
+                <img src="./media/licor.jpg" alt="Producto 2" />
+                <h3>Aloe Ardiente</h3>
+                <p>Descripción del Producto 2.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSexhvnArqVLDn5bDgeU1nZIv0Hb98nCp88vjqRAJcG6_Vdu4g/viewform?usp=header" class="comprar">Comprar</a>
+            </div>
+            <div class="producto">
+                <img src="./media/fert.jpg" alt="Producto 3" />
+                <h3>Forti-Vera</h3>
+                <p>Descripción del Producto 3.</p>
+                <a href="link-a-producto3" class="comprar">Comprar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/16RMdRcqFU/" target="_blank">
+                <img src="./media/feis.webps" alt="Facebook Logo" class="social-logo" />
+            </a>
+            <a href="https://chat.whatsapp.com/EJArkfX6bsg7NFVcvHPl3q" target="_blank">
+                <img src="./media/wss.png" alt="WhatsApp Logo" class="social-logo" />
+            </a>
+        </div>
+
+        <div class="content">
+            <div class="sadcv">
+                <img src="./media/sadecv.png" alt="eslogan" class="sadecv-img" />
+            </div>
+        </div>
+    </footer>
+    <script>
+        window.onscroll = function() {
+            const header = document.querySelector('.header');
+            header.style.transform = 'translateY(-' + window.scrollY + 'px)';
+        };
+
+        let indice = 0;
+        mostrarImagen(indice);
+
+        function cambiarImagen(n) {
+            mostrarImagen(indice += n);
+        }
+
+        function mostrarImagen(n) {
+            const imagenes = document.getElementsByClassName("carrusel-imagen");
+            if (n >= imagenes.length) {
+                indice = 0;
+            }
+            if (n < 0) {
+                indice = imagenes.length - 1;
+            }
+            for (let i = 0; i < imagenes.length; i++) {
+                imagenes[i].style.display = "none"; // Oculta todas las imágenes
+            }
+            imagenes[indice].style.display = "flex"; // Muestra la imagen actual
+        }
+    </script>
+</body>
+</html>
